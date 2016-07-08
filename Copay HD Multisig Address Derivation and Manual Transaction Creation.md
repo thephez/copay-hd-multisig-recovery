@@ -65,20 +65,20 @@ Important Notes
 BIP32 Key to Public Key
 =======================
 
-1.  Open <http://bip32.org/> and change the **Derive From** option to
+5.  Open <http://bip32.org/> and change the **Derive From** option to
     ***BIP32 Key***
 
-2.  Enter the BIP32 Extended Key
+6.  Enter the BIP32 Extended Key
 
     a.  The Depth should be 4 (if it is 0, the BIP32 *Root* Key was
         copied in step 3 instead of the BIP32 *Extended* Key)
 
 ![](media/image2.tmp){width="6.3in" height="8.626344050743658in"}
 
-1.  Change the **Derivation Path** to ***Custom***
+7.  Change the **Derivation Path** to ***Custom***
 
-2.  Change the **Custom Path** field to ***m/0*** to get the details for
-    the first Key (2^nd^ key is m/1, 3^rd^ is m/2, etc.)
+8.  Change the **Custom Path** field to ***m/0*** to get the details for
+    the first Key (2nd key is m/1, 3rd is m/2, etc.)
 
     a.  Note that the full path of this key is m/44’/0’/0’/0/0 because
         path m/0 of the BIP32 Extended key m/44’/0’/0’/0 (from Steps 2
@@ -86,17 +86,17 @@ BIP32 Key to Public Key
 
 ![](media/image3.tmp){width="6.0in" height="7.30069772528434in"}
 
-1.  Copy the **Public Key (Hex)** field and save it for use later when
+9.  Copy the **Public Key (Hex)** field and save it for use later when
     creating the multisig address
 
-2.  Go back to Step 1 and repeat for the next cosigner until the Public
+10.  Go back to Step 1 and repeat for the next cosigner until the Public
     key for all cosigners has been obtained
 
     a.  The same derivation path must be used for each cosigner key in
         order to generate the multisig address used by the wallet (i.e.
         m/44’/0’/0’/0/0 from all cosigners)
 
-3.  Once public keys are found for all cosigners, continue with step 12.
+11.  Once public keys are found for all cosigners, continue with step 12.
 
 Public Keys to Multisig Addresses
 =================================
@@ -113,18 +113,21 @@ a.  For these keys the order is 023…, 039…, 03b… because 023… &lt; 039�
     &lt; 03b… as shown in the adjusted table below
 
   **Information from Derivation path m/44’/0’/0’/0/0**
-  ------------------------------------------------------ ------------------------------------ --------------------------------------------------------------------
-  **Copayer**
-  0
-  1
-  2
 
+  **Copayer** | **Address** | **Public Key (Hex)**
+  ------------- | ----------- | ---------------------- 
+  0 | 12ebMdYkqzCoQyxPCcpsGsbDazoSXzE5Me | **03b**9ce4112eb69056332c5d33ed6d61689dd3c8053bcda97ca55aa61855aac7521
+  1 | 14CyHaVetHyADBpUyrax3wVPkDoJvSvbUj | **023**9170ec6dd685eb7424e72ecf43836e3b2fd20270be5dd68ba9b27a68ab5cff4
+  2 | 12u5XXV2YYPbTLbiqwqcidiQmruFyFH2Gx | **039**dcfeac8c188ead567c1d6eefd8e4d661e389201f5a08404ead4de8a1923c220
+
+<br>
   **Sorted by Public Key (Hex) smallest to largest**
-  ---------------------------------------------------- ------------------------------------ --------------------------------------------------------------------
-  **Copayer**
-  1
-  2
-  0
+
+  **Copayer** | **Address** | **Public Key (Hex)**
+  ------------- | ----------- | ---------------------- 
+  1 | 14CyHaVetHyADBpUyrax3wVPkDoJvSvbUj | **023**9170ec6dd685eb7424e72ecf43836e3b2fd20270be5dd68ba9b27a68ab5cff4
+  2 | 12u5XXV2YYPbTLbiqwqcidiQmruFyFH2Gx | **039**dcfeac8c188ead567c1d6eefd8e4d661e389201f5a08404ead4de8a1923c220
+  0 | 12ebMdYkqzCoQyxPCcpsGsbDazoSXzE5Me | **03b**9ce4112eb69056332c5d33ed6d61689dd3c8053bcda97ca55aa61855aac7521
 
 1.  Go to <https://coinb.in> and select New -&gt; MultiSig Address (or
     <https://coinb.in/#newMultiSig>)

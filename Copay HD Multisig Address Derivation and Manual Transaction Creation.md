@@ -225,15 +225,17 @@ Sign the Spend Transaction
 ![](media/image10.png){width="4.7in" height="4.373845144356955in"}
 
   **Information from Derivation path m/44’/0’/0’/0/10**
-  ------------------------------------------------------- ------------------------------------ ------------------------------------------------------
-  **Copayer**
-  0
-  1
-  2
 
-> **New transaction (Original transaction signed with the private key
-> from the Copayer 2)**
->
+  **Copayer** | **Address** | **Private Key**
+  ------------- | ----------- | ---------------------- 
+  0 | 1N7bBvso3QXc4VWEi7nLCqFGP8p9yqy56z | L1htDAcwj6HoLpjhqSaLV3pBBnrseMnp8xST8bcu2eMraEfSPXnc
+  1 | 1PwM4YaFBsoKhEF7RiqLL8bZQmuRKydrEX | L4EYTAxJ8grT6xKGW9bcghVYWrvBCadSc4boCZicWB4GnGEx8m2H
+  2 | 1D3CsVtskAqDAkW2r2tPjm9hFnpQjpKm2x | L463K7sHKzxGm82EDqWhVKa498qUXAp18JMEcvRbUGjTL4i4KP4v
+
+
+ **New transaction (Original transaction signed with the private key
+ from the Copayer 2)**
+
 > 0100000001c82b8014cd1b9b47c4b06b6ae880ebe19dadad7c91ddf5fac4cae4486aefaf7a00000000b500483045022100de9cee0f3cbd19e8bc224d777fb6f26b2015713e5a8ead13fe1b72a77c5f4cc802203b5606a21cb78532c4cf1519c8a40a886d1c1ee32092cd9784f8674265a3358b014c695221025a74c31e272a8f0c93e42bb1ca29677bcb007439669221956653951d8037ddd42102694a59a4494970919b5a46da52d9916cab882e33b27b4e0bd94e2914705733cb2103b05b2080e2f596b54c31889b1a09791688e1aaf97de08dc63dde5f986dc2db0853aeffffffff01a08601000000000017a914b1d7d317710fbb8ed5ee516ce40389a5129458638700000000
 
 1.  If the minimum number of signers has not been met (i.e. 2 out of 3
@@ -243,8 +245,8 @@ Sign the Spend Transaction
 
 ![](media/image11.tmp){width="5.8in" height="4.234003718285214in"}
 
-> **New Transaction 2 (First signed transaction signed by Copayer 0)**
->
+ **New Transaction 2 (First signed transaction signed by Copayer 0)**
+
 > 0100000001c82b8014cd1b9b47c4b06b6ae880ebe19dadad7c91ddf5fac4cae4486aefaf7a00000000fdfe0000483045022100de9cee0f3cbd19e8bc224d777fb6f26b2015713e5a8ead13fe1b72a77c5f4cc802203b5606a21cb78532c4cf1519c8a40a886d1c1ee32092cd9784f8674265a3358b01483045022100fca79c692442ff4ca13264b57f0205bba9fbf3ca843add66d4a00df6fda5cda9022053a5d3d27dca4834c533dd17045846a9aa1382779ef9a476d25203ade75c051e014c695221025a74c31e272a8f0c93e42bb1ca29677bcb007439669221956653951d8037ddd42102694a59a4494970919b5a46da52d9916cab882e33b27b4e0bd94e2914705733cb2103b05b2080e2f596b54c31889b1a09791688e1aaf97de08dc63dde5f986dc2db0853aeffffffff01a08601000000000017a914b1d7d317710fbb8ed5ee516ce40389a5129458638700000000
 
 1.  Repeat step 10 until a sufficient number of keys have signed the
@@ -321,12 +323,12 @@ public “addresses only” key avoids exposing the private key
 **Copay Address Derivation Strategy by Version** (per
 <https://github.com/bitpay/copay>)
 
-  **Copay Version**   **Wallet Type**             **Derivation Strategy**   **Address Type**
-  ------------------- --------------------------- ------------------------- ------------------
-  &lt;1.2             All                         BIP45                     P2SH
-  &gt;=1.2            Non-multisig                BIP44                     P2PKH
-  &gt;=1.2            Multisig                    BIP44                     P2SH
-  &gt;=1.5            Multisig Hardware wallets   BIP44 (root m/48’)        P2SH
+  **Copay Version**  | **Wallet Type**           |  **Derivation Strategy**|   **Address Type**
+  -------------------| ---------------------------| -------------------------| ------------------
+  &lt;1.2            | All                       |  BIP45                  |   P2SH
+  &gt;=1.2           | Non-multisig              |  BIP44                  |   P2PKH
+  &gt;=1.2           | Multisig                  |  BIP44                  |   P2SH
+  &gt;=1.5           | Multisig Hardware wallets |  BIP44 (root m/48’)     |   P2SH
 
 References
 ==========

@@ -73,7 +73,7 @@ BIP32 Key to Public Key
     a.  The Depth should be 4 (if it is 0, the BIP32 *Root* Key was
         copied in step 3 instead of the BIP32 *Extended* Key)
 
-![](media/2.png){width="6.3in" height="8.626344050743658in"}
+![](media/2.png)
 
 7.  Change the **Derivation Path** to ***Custom***
 
@@ -84,7 +84,7 @@ BIP32 Key to Public Key
         path m/0 of the BIP32 Extended key m/44’/0’/0’/0 (from Steps 2
         and 3) was used
 
-![](media/3.png){width="6.0in" height="7.30069772528434in"}
+![](media/3.png)
 
 9.  Copy the **Public Key (Hex)** field and save it for use later when
     creating the multisig address
@@ -132,7 +132,7 @@ a.  For these keys the order is 023…, 039…, 03b… because 023… &lt; 039�
 1.  Go to <https://coinb.in> and select New -&gt; MultiSig Address (or
     <https://coinb.in/#newMultiSig>)
 
-> ![](media/4.png){width="3.132346894138233in"
+> ![](media/4.png)
 > height="1.3645833333333333in"}
 
 1.  Enter the Public Keys in the sorted order, select the number of
@@ -142,7 +142,7 @@ a.  For these keys the order is 023…, 039…, 03b… because 023… &lt; 039�
     a.  Link to the address generated in this example:
         <https://coinb.in/?verify=52210239170ec6dd685eb7424e72ecf43836e3b2fd20270be5dd68ba9b27a68ab5cff421039dcfeac8c188ead567c1d6eefd8e4d661e389201f5a08404ead4de8a1923c2202103b9ce4112eb69056332c5d33ed6d61689dd3c8053bcda97ca55aa61855aac752153ae#verify>
 
-![](media/5.png){width="7.1in" height="5.249222440944882in"}
+![](media/5.png)
 
 > **Redeem Script (this is necessary to manually create a spend
 > transaction):**
@@ -153,7 +153,7 @@ a.  For these keys the order is 023…, 039…, 03b… because 023… &lt; 039�
     matches xpub/0/0 shown in Copay -&gt; Wallet Preferences -&gt;
     Advanced -&gt; Wallet Information
 
-![](media/6.png){width="3.223417541557305in" height="2.8125in"}
+![](media/6.png)
 
 \
 Recovering funds by manually constructing a transaction
@@ -185,8 +185,7 @@ Create the Spend Transaction
 3.  Once the unspent funds inputs are retrieved, click on the **Inputs**
     tab to see the details
 
-![](media/7.png){width="5.705365266841644in"
-height="5.020833333333333in"}
+![](media/7.png)
 
 1.  Click the **Outputs** tab, enter the address and amount for each
     destination (can be split and sent to multiple destinations), then
@@ -194,11 +193,9 @@ height="5.020833333333333in"}
 
     a.  WARNING: make sure the Transaction Fee is a reasonable amount
 
-> ![](media/8.png){width="5.739583333333333in"
-> height="4.927083333333333in"}
+> ![](media/8.png)
 >
-> ![](media/9.png){width="5.739583333333333in"
-> height="2.3845636482939634in"}
+> ![](media/9.png)
 >
 > **Unsigned Transaction:**
 >
@@ -222,7 +219,7 @@ Sign the Spend Transaction
 
 5.  A new signed transaction will be displayed
 
-![](media/10.png){width="4.7in" height="4.373845144356955in"}
+![](media/10.png)
 
   **Information from Derivation path m/44’/0’/0’/0/10**
 
@@ -243,7 +240,7 @@ Sign the Spend Transaction
     the script field, then sign the new transaction with the next
     private key
 
-![](media/11.png){width="5.8in" height="4.234003718285214in"}
+![](media/11.png)
 
  **New Transaction 2 (First signed transaction signed by Copayer 0)**
 
@@ -263,8 +260,7 @@ Verify the Spend Transaction
     b.  Verify that it has been signed by at least the minimum number of
         signers
 
-![](media/12.png){width="5.635416666666667in"
-height="5.777662948381452in"}
+![](media/12.png)
 
 Broadcast the Spend Transaction
 -------------------------------
@@ -293,8 +289,7 @@ MINER, NOT TO YOU OR YOUR INTENDED RECIPIENT). \*\****
     a.  If the transaction is successfully broadcast, the txid will
         be displayed. Otherwise an error will be displayed.
 
-![](media/13.png){width="5.895833333333333in"
-height="3.9895833333333335in"}
+![](media/13.png)
 
 1.  At this point, the transaction should be recognized by the receiving
     wallet and viewable on a block explorer like Blockchain.info,
@@ -312,7 +307,7 @@ height="3.9895833333333335in"}
     source for the Copay Recovery
     (<https://github.com/bitpay/copay-recovery/blob/gh-pages/js/services.js#L125>).
 
-![](media/14.png){width="5.4375in" height="1.4375in"}
+![](media/14.png)
 
 -   Use ***m/44'/1'/0'*** for Testnet. Not sure why Mainnet requires an
     added **/0** on the end

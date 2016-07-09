@@ -133,7 +133,6 @@ a.  For these keys the order is 023…, 039…, 03b… because 023… &lt; 039�
     <https://coinb.in/#newMultiSig>)
 
 > ![](media/4.png)
-> height="1.3645833333333333in"}
 
 1.  Enter the Public Keys in the sorted order, select the number of
     signatures required (in this example, it was a 2-of-3 wallet, so the
@@ -155,7 +154,7 @@ a.  For these keys the order is 023…, 039…, 03b… because 023… &lt; 039�
 
 ![](media/6.png)
 
-\
+
 Recovering funds by manually constructing a transaction
 =======================================================
 
